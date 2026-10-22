@@ -2,7 +2,7 @@
 name = "rss-to-bluesky-bot"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.94"
+rust-version = "1.99"
 description = "A lightweight, recoverable RSS and Atom publisher for Bluesky"
 license = "MIT"
 repository = "https://github.com/MisterClean/rss-to-bluesky-bot"
@@ -21,8 +21,8 @@ fs2 = "0.4"
 image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp", "gif"] }
 reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "gzip"] }
 quick-xml = "0.42"
-rusqlite = { version = "0.38", features = ["bundled", "backup"] }
-scraper = { version = "0.24", default-features = false }
+rusqlite = { version = "0.40", features = ["bundled", "backup"] }
+scraper = { version = "0.29", default-features = false }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"

@@ -139,10 +139,9 @@ fn largest_srcset(srcset: &str, displayed_width: f64) -> Option<(&str, f64)> {
                 Some(descriptor) => {
                     let (number, scale) = if let Some(width) = descriptor.strip_suffix('w') {
                         (width, 1.0)
-                    } else if let Some(density) = descriptor.strip_suffix('x') {
-                        (density, displayed_width)
                     } else {
-                        return None;
+                        let density = descriptor.strip_suffix('x')?;
+                        (density, displayed_width)
                     };
                     number
                         .parse::<f64>()
