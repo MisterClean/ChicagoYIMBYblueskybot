@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@1.99.1
       - run: cargo install cargo-audit --locked --version 0.22.2
       - run: cargo audit --target-os linux --target-arch x86_64
