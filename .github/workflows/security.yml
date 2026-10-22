@@ -1,0 +1,19 @@
+name: Dependency security
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * 1'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@1.99.1
+      - run: cargo install cargo-audit --locked --version 0.22.2
+      - run: cargo audit --target-os linux --target-arch x86_64
