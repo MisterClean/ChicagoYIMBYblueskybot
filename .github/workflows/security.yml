@@ -14,6 +14,6 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@1.99.1
+      - uses: dtolnay/rust-toolchain@1.120.0
       - run: cargo install cargo-audit --locked --version 0.22.2
       - run: cargo audit --target-os linux --target-arch x86_64
