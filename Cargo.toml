@@ -10,7 +10,7 @@ publish = false
 
 [dependencies]
 anyhow = "1"
-atrium-api = { version = "0.25.8", default-features = false, features = ["namespace-appbsky"] }
+atrium-api = { version = "0.26.0", default-features = false, features = ["namespace-appbsky"] }
 chrono = { version = "0.4", default-features = false, features = ["clock", "serde"] }
 clap = { version = "4", features = ["derive"] }
 dotenvy = "0.15"
